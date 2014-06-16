@@ -1,8 +1,7 @@
 /*
  * util.c
  *
- * Copyright (c) 2011 Citrix Systems Inc.,
- * All rights reserved.
+ * Copyright (c) 2011 Citrix Systems Inc.
  *
  */
 
