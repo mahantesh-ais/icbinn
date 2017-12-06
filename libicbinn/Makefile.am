@@ -33,21 +33,13 @@ SUBDIRS=. rpc src server client test
 
 BUILT_SOURCES=version.h
 
-bin_SCRIPTS = libicbinn-config 
-
 pkgconfigdir=${libdir}/pkgconfig
 pkgconfig_DATA= libicbinn.pc 
 
 libicbinn.pc.src:libicbinn.pc.src.in
-libicbinn.pc:libicbinn.pc.src
+libicbinn.pc:libicbinn.pc.src version.sed
 	@SED@ -f version.sed < libicbinn.pc.src > libicbinn.pc || rm -f libicbinn.pc
 
-
-libicbinn-config.src:libicbinn-config.src.in
-libicbinn-config:libicbinn-config.src version.sed
-	@SED@ -f version.sed < libicbinn-config.src > libicbinn-config || rm -f libicbinn-config
-	chmod +x $@
-	
 VNUM=${shell git rev-parse HEAD}
 
 do_test: all

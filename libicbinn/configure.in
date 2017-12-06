@@ -152,7 +152,5 @@ AC_OUTPUT([Makefile
 	rpc/Makefile
 	server/Makefile
 	client/Makefile
-	libicbinn.pc.src
-	libicbinn-config.src],
-	[chmod +x libicbinn-config.src])
+	libicbinn.pc.src])
 

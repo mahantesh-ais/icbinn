@@ -8,4 +8,4 @@ Description: libicbinn_resolved
 Requires: 
 Version: %VERSION%
 Libs: -L${libdir} -licbinn_resolved -ldl
-Cflags: -I${includedir} @LIBICBINN_CFLAGS@ 
+Cflags: -I${includedir}
