@@ -37,3 +37,4 @@ rpc/icbinn_prot_xdr.c
 client/icbinn_ftp
 server/icbinn_svc
 test/test
+INSTALL
