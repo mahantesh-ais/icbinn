@@ -35,7 +35,7 @@ LIBV4V_LIBS_NO_DL=${LIBV4V_LIBS:-ldl=}
 
 PROTOSRCS=client.c close.c lock.c mkdir.c null.c open.c pread.c pwrite.c readdir.c rename.c rmdir.c stat.c unlink.c util.c version.c ftruncate.c fallocate.c rand.c readlink.c symlink.c statfs.c fsync.c canary.c
 
-ICBINNSRCS=../rpc/icbinn_prot_clnt.c ../rpc/icbinn_prot_xdr.c  ${PROTOSRCS} ../rpc/xdr_fixup.c
+ICBINNSRCS=../rpc/icbinn_prot_clnt.c ../rpc/icbinn_prot_xdr.c  ${PROTOSRCS}
 
 noinst_HEADERS=project.h prototypes.h icbinn-tail.h ext_prototypes.h 
 

@@ -68,6 +68,3 @@ bool_t xdr_icbinn_prot_ftruncateargs(XDR *xdrs, icbinn_prot_ftruncateargs *objp)
 bool_t xdr_icbinn_prot_randargs(XDR *xdrs, icbinn_prot_randargs *objp);
 bool_t xdr_icbinn_prot_randokres(XDR *xdrs, icbinn_prot_randokres *objp);
 bool_t xdr_icbinn_prot_randres(XDR *xdrs, icbinn_prot_randres *objp);
-/* ../rpc/xdr_fixup.c */
-bool_t xdr_quad_t(XDR *x, quad_t *q);
-bool_t xdr_u_quad_t(XDR *x, u_quad_t *q);
