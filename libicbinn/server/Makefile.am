@@ -57,7 +57,7 @@ CLEANFILES = ${DBUS_CLIENT_H}
 LDFLAGS+=-Wl,--no-as-needed
 
 %_client.h: ${IDLDIR}/%.xml
-	${XC_RPCGEN} -c -o ./ $<
+	${XC_RPCGEN} --templates-dir=${RPCGEN_TEMPLATES} -c -o ./ $<
 
 protos: 
 	echo > prototypes.h

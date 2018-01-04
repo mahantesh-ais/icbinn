@@ -39,3 +39,4 @@ server/icbinn_svc
 test/test
 INSTALL
 *-libtool
+configure
