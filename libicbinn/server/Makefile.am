@@ -38,7 +38,7 @@ endif
 
 DBUS_CLIENT_H=${DBUS_CLIENT_IDLS:%=%_client.h}
 
-PROTOSRCS = server.c svc_main.c util.c dbusrpc.c version.c ../rpc/icbinn_prot_svc.c ../rpc/icbinn_prot_xdr.c ../rpc/xdr_fixup.c
+PROTOSRCS = server.c svc_main.c util.c dbusrpc.c version.c ../rpc/icbinn_prot_svc.c ../rpc/icbinn_prot_xdr.c
 
 bin_PROGRAMS = icbinn_svc 
 

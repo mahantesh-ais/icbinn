@@ -31,21 +31,13 @@
 SUBDIRS=. src
 BUILT_SOURCES=version.h
 
-bin_SCRIPTS = libicbinn_resolved-config 
-
 pkgconfigdir=${libdir}/pkgconfig
 pkgconfig_DATA= libicbinn_resolved.pc 
 
 libicbinn_resolved.pc.src:libicbinn_resolved.pc.src.in
-libicbinn_resolved.pc:libicbinn_resolved.pc.src
+libicbinn_resolved.pc:libicbinn_resolved.pc.src version.sed
 	@SED@ -f version.sed < libicbinn_resolved.pc.src > libicbinn_resolved.pc || rm -f libicbinn_resolved.pc
 
-
-libicbinn_resolved-config.src:libicbinn_resolved-config.src.in
-libicbinn_resolved-config:libicbinn_resolved-config.src version.sed
-	@SED@ -f version.sed < libicbinn_resolved-config.src > libicbinn_resolved-config || rm -f libicbinn_resolved-config
-	chmod +x $@
-	
 VNUM=${shell git rev-parse HEAD}
 
 version.sed: never-happy

@@ -8,4 +8,4 @@ Description: libicbinn
 Requires: 
 Version: %VERSION%
 Libs: -L${libdir} -licbinn @LIBTIRPC_LIBS@ @LIBV4V_LIBS@ -ldl
-Cflags: -I${includedir} @LIBV4V_CFLAGS@ @LIBTIRPC_CFLAGS@ 
+Cflags: -I${includedir}
