@@ -28,29 +28,16 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-
-INCLUDES =
-
 LIBICBINN_LIBS_NO_DL=${LIBICBINN_LIBS:-ldl=}
 
-libicbinn_resolved_a_SOURCES =
-libicbinn_resolved_a_LIBADD = libicbinn_prelink.o
+libicbinn_resolved_la_SOURCES =
 
-#${AM_CFLAGS} ${V4V_EXTRA_CFLAGS}
+lib_LTLIBRARIES=libicbinn_resolved.la
 
-lib_LIBRARIES=libicbinn_resolved.a #libicbinn_resolved.so
-
-
-#libicbinn_so_LDFLAGS = \
-#        -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
-#        -release $(LT_RELEASE) \
-#        -export-dynamic \
-#	@LIBTIRPC_LIBS@ @LIBV4V_LIBS@
-
-LDFLAGS+=-Wl,--no-as-needed
-
-libicbinn_prelink.o: 
-	        ${CC} ${CFLAGS} ${LDFLAGS} -nostdlib -nodefaultlibs -Wl,-r -o $@ -Wl,-u -Wl,icbinn_canary -Wl,-Bstatic ${LIBICBINN_LIBS_NO_DL} -Wl,-Bdynamic 
-
-
-
+libicbinn_resolved_la_LDFLAGS=-Wl,--no-as-needed
+libicbinn_resolved_la_LDFLAGS+=-nostdlib
+libicbinn_resolved_la_LDFLAGS+=-nodefaultlibs
+libicbinn_resolved_la_LDFLAGS+=-Wl,-u
+libicbinn_resolved_la_LDFLAGS+=-Wl,icbinn_canary
+libicbinn_resolved_la_LDFLAGS+=-Wl,-Bstatic ${LIBICBINN_LIBS_NO_DL}
+libicbinn_resolved_la_LDFLAGS+=-Wl,-Bdynamic
